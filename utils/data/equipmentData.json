@@ -1,0 +1,52 @@
+{
+  "-NykRscPZ1HA4-KRAywn": {
+    "firebaseKey": "-NykRscPZ1HA4-KRAywn",
+    "image": "https://img.constructionequipment.com/files/base/ebm/constructionequipment/image/2022/07/Cat_336_excavator.62cd8955d043c.png?auto=format,compress&fit=fill&fill=blur&w=1200&h=630",
+    "name": "336-Excavator",
+    "size": "Large",
+    "jobsite_id": null,
+    "operable": false,
+    "mechanic_id": null,
+    "uid": "duoqjjx9RVSKcyH2J7o6HeO7Clb2"
+  },
+  "-NykRscQlxjuFAEeHgEp": {
+    "firebaseKey": "-NykRscQlxjuFAEeHgEp",
+    "image": "https://www.bossmachinery.nl/data/images/vehicles/01_Caterpillar_D6K_BK027DSC08535.jpg",
+    "name": "D6k2-Dozer",
+    "size": "Medium",
+    "jobsite_id": null,
+    "operable": false,
+    "mechanic_id": null,
+    "uid": "duoqjjx9RVSKcyH2J7o6HeO7Clb2"
+  },
+  "-NykRscRxFSDiKE-Ddua": {
+    "firebaseKey": "-NykRscRxFSDiKE-Ddua",
+    "image": "https://s7d2.scene7.com/is/image/Caterpillar/CM20230501-581a1-733d3?$highres$",
+    "name": "CS5-Compactor",
+    "size": "Small",
+    "jobsite_id": null,
+    "operable": false,
+    "mechanic_id": null,
+    "uid": "duoqjjx9RVSKcyH2J7o6HeO7Clb2"
+  },
+  "-NykRscS29bQZh6jLg6Y": {
+    "firebaseKey": "-NykRscS29bQZh6jLg6Y",
+    "image": "https://s7d2.scene7.com/is/image/Caterpillar/CM20190628-ec0c4-3c51c",
+    "name": "140-Grader",
+    "size": "Large",
+    "jobsite_id": null,
+    "operable": true,
+    "mechanic_id": null,
+    "uid": "duoqjjx9RVSKcyH2J7o6HeO7Clb2"
+  },
+  "-NykRscTKJQJnKZo0xVs": {
+    "firebaseKey": "-NykRscTKJQJnKZo0xVs",
+    "image": "http://dummyimage.com/136x100.png/ff4444/ffffff",
+    "name": "416-Backhoe",
+    "size": "Medium",
+    "jobsite_id": null,
+    "operable": true,
+    "mechanic_id": null,
+    "uid": "duoqjjx9RVSKcyH2J7o6HeO7Clb2"
+  }
+}

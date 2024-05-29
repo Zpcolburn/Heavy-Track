@@ -2,8 +2,8 @@ import { clientCredentials } from '../utils/client';
 
 const endpoint = clientCredentials.databaseURL;
 
-const getAllJobSites = (uid) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/books.json?orderBy="uid"&equalTo="${uid}"`, {
+const getAllJobSites = () => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/jobsite.json`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -14,4 +14,19 @@ const getAllJobSites = (uid) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-export default getAllJobSites;
+const getSingleJobSite = (firebaseKey) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/jobsite/${firebaseKey}.json`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(data))
+    .catch(reject);
+});
+
+export {
+  getAllJobSites,
+  getSingleJobSite,
+};

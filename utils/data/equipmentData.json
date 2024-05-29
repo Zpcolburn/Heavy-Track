@@ -6,7 +6,8 @@
     "size": "Large",
     "jobsite_id": null,
     "operable": false,
-    "mechanic_id": null
+    "mechanic_id": null,
+    "uid": "duoqjjx9RVSKcyH2J7o6HeO7Clb2"
   },
   "-NykRscQlxjuFAEeHgEp": {
     "firebaseKey": "-NykRscQlxjuFAEeHgEp",
@@ -15,16 +16,18 @@
     "size": "Medium",
     "jobsite_id": null,
     "operable": false,
-    "mechanic_id": null
+    "mechanic_id": null,
+    "uid": "duoqjjx9RVSKcyH2J7o6HeO7Clb2"
   },
   "-NykRscRxFSDiKE-Ddua": {
-    "firebaseKey": "-NykRscQlxjuFAEeHgEp",
+    "firebaseKey": "-NykRscRxFSDiKE-Ddua",
     "image": "https://s7d2.scene7.com/is/image/Caterpillar/CM20230501-581a1-733d3?$highres$",
     "name": "CS5-Compactor",
     "size": "Small",
     "jobsite_id": null,
     "operable": false,
-    "mechanic_id": null
+    "mechanic_id": null,
+    "uid": "duoqjjx9RVSKcyH2J7o6HeO7Clb2"
   },
   "-NykRscS29bQZh6jLg6Y": {
     "firebaseKey": "-NykRscS29bQZh6jLg6Y",
@@ -33,7 +36,8 @@
     "size": "Large",
     "jobsite_id": null,
     "operable": true,
-    "mechanic_id": null
+    "mechanic_id": null,
+    "uid": "duoqjjx9RVSKcyH2J7o6HeO7Clb2"
   },
   "-NykRscTKJQJnKZo0xVs": {
     "firebaseKey": "-NykRscTKJQJnKZo0xVs",
@@ -42,6 +46,7 @@
     "size": "Medium",
     "jobsite_id": null,
     "operable": true,
-    "mechanic_id": null
+    "mechanic_id": null,
+    "uid": "duoqjjx9RVSKcyH2J7o6HeO7Clb2"
   }
 }

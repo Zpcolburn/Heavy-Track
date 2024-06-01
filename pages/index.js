@@ -1,22 +1,35 @@
-// import { Button } from 'react-bootstrap'; // TODO: COMMENT IN FOR AUTH
-// import { signOut } from '../utils/auth'; // TODO: COMMENT IN FOR AUTH
-// import { useAuth } from '../utils/context/authContext'; // TODO: COMMENT IN FOR AUTH
+import React, { useEffect, useState } from 'react';
+import { getAllJobSites } from '../api/jobsiteData';
+import { useAuth } from '../utils/context/authContext';
+import JobSiteCard from '../components/JobSiteCard';
 
 function Home() {
-  // const { user } = useAuth(); // TODO: COMMENT IN FOR AUTH
+  // TODO: Set a state for jobsite
+  const [jobsites, setJobSites] = useState([]);
 
-  const user = { displayName: 'Zach Colburn' }; // TODO: COMMENT OUT FOR AUTH
+  // TODO: Get user ID using useAuth Hook
+  const { user } = useAuth();
+
+  // TODO: create a function that makes the API call to get all the memeber
+  const getAllTheJobSites = () => {
+    getAllJobSites(user.uid).then(setJobSites);
+  };
+
+  // TODO: make the call to the API to get all the jobsites on component render
+  useEffect(() => {
+    getAllTheJobSites();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
-    <div
-      className="text-center d-flex flex-column justify-content-center align-content-center"
-      style={{
-        height: '90vh',
-        padding: '30px',
-        maxWidth: '400px',
-        margin: '0 auto',
-      }}
-    >
-      <h1>Hello {user.displayName}! </h1>
+    <div className="text-center my-4">
+      <div className="d-flex flex-wrap">
+        {/*  map over jobsites here using jobsiteCard component */}
+        {jobsites.map((jobsite) => (
+          <JobSiteCard key={jobsite.firebaseKey} jobsiteObj={jobsite} onUpdate={getAllTheJobSites} />
+        ))}
+      </div>
+
     </div>
   );
 }

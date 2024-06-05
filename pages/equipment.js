@@ -20,8 +20,8 @@ export default function ShowEquipment() {
 
   return (
     <div className="text-center my-4">
-      <Link href="/author/new" passHref>
-        <Button>Add Equipemnt</Button>
+      <Link href="/equipment/new" passHref>
+        <Button>Add Equipment</Button>
       </Link>
       <div className="d-flex flex-wrap">
         {equipment.map((equip) => (

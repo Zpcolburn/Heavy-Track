@@ -15,7 +15,7 @@ function EquipmentCard({ equipmentObj, onUpdate }) {
   };
   return (
     <Card style={{ width: '16rem', margin: '10px' }}>
-      <Card.Img variant="top" src={equipmentObj.image} style={{ height: '250px' }} />
+      <Card.Img variant="top" src={equipmentObj.image} style={{ height: '200px', objectFit: 'cover' }} />
       <Card.Body>
         <Card.Title>{equipmentObj.name}</Card.Title>
         <Card.Text>{equipmentObj.size}</Card.Text>

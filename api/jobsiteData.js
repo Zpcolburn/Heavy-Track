@@ -26,7 +26,26 @@ const getSingleJobSite = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const getJobSiteEquipment = (firebaseKey) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/equipment.json?orderBy="jobsite_id"&equalTo="${firebaseKey}"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data) {
+        resolve(Object.values(data));
+      } else {
+        resolve([]);
+      }
+    })
+    .catch(reject);
+});
+
 export {
   getAllJobSites,
   getSingleJobSite,
+  getJobSiteEquipment,
 };

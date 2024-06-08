@@ -12,7 +12,7 @@ function JobSiteCard({ jobsiteObj }) {
         <Card.Title>{jobsiteObj.name} </Card.Title>
         <Card.Text>{jobsiteObj.foreman}</Card.Text>
         {/* DYNAMIC LINK TO VIEW THE JOBSITE DETAILS  */}
-        <Link href={`/jobsite/view/${jobsiteObj.firebaseKey}`} passHref>
+        <Link href={`/jobsite/${jobsiteObj.firebaseKey}`} passHref>
           <Button variant="info">View</Button>
         </Link>
       </Card.Body>

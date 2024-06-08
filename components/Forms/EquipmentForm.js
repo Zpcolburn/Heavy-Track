@@ -39,7 +39,7 @@ function EquipmentForm({ obj }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (obj.firebaseKey) {
-      updateEquipment(formInput).then(() => router.push(`/equipment/${obj.firebaseKey}`));
+      updateEquipment(formInput).then(() => router.push('/equipment '));
     } else {
       const payload = { ...formInput, uid: user.uid };
       createEquipment(payload).then(({ name }) => {
@@ -79,13 +79,13 @@ function EquipmentForm({ obj }) {
         />
       </FloatingLabel>
 
-      <FloatingLabel controlId="floatingSelect" label="Job Site">
+      <FloatingLabel controlId="floatingSelect1" label="Job Site">
         <Form.Select
           aria-label="Job Site"
           name="jobsite_id"
           onChange={handleChange}
           className="mb-3"
-          value={obj.jobsite_id}
+          value={formInput.jobsite_id}
           required
         >
           <option value="">Select a Job Site</option>
@@ -103,13 +103,13 @@ function EquipmentForm({ obj }) {
       </FloatingLabel>
 
       {/* JobSite SELECT  */}
-      <FloatingLabel controlId="floatingSelect" label="Equipment Size">
+      <FloatingLabel controlId="floatingSelect2" label="Equipment Size">
         <Form.Select
           aria-label="Size"
           name="size"
           onChange={handleChange}
           className="mb-3"
-          value={obj.size}
+          value={formInput.size}
           required
         >
           <option value="Small">Small</option>

@@ -7,10 +7,10 @@ export default function ViewEquipment() {
   const [equipDetails, setEquipDetails] = useState({});
   const router = useRouter();
 
-  // TODO: grab firebaseKey from url
+  // grab firebaseKey from url
   const { firebaseKey } = router.query;
 
-  // TODO: make call to API layer to get the data
+  // make call to API layer to get the data
   useEffect(() => {
     viewEquipmentDetails(firebaseKey).then(setEquipDetails);
   }, [firebaseKey]);
@@ -29,10 +29,9 @@ export default function ViewEquipment() {
         <hr />
         <p>Location: {equipDetails.jobsiteObject?.name}</p>
         <hr />
-        <p>
-          {equipDetails.operable
-            ? `Operable:  ${equipDetails.operable}`
-            : `$${equipDetails.operable}`}
+        <p> {equipDetails.operable
+          ? `Operable:  ${equipDetails.operable}`
+          : `Operable:  ${equipDetails.operable}`}
         </p>
       </div>
     </div>

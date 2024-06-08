@@ -7,7 +7,7 @@ import Link from 'next/link';
 function JobSiteCard({ jobsiteObj }) {
   return (
     <Card style={{ width: '16rem', margin: '10px' }}>
-      <Card.Img variant="top" src={jobsiteObj.image} alt={jobsiteObj.name} style={{ height: '250px', 'object-fit': 'cover' }} />
+      <Card.Img variant="top" src={jobsiteObj.image} alt={jobsiteObj.name} style={{ height: '250px', objectFit: 'cover' }} />
       <Card.Body>
         <Card.Title>{jobsiteObj.name} </Card.Title>
         <Card.Text>{jobsiteObj.foreman}</Card.Text>

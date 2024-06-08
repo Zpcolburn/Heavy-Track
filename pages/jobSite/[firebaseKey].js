@@ -5,13 +5,29 @@ import { viewJobSiteDetails } from '../../api/mergedData';
 
 export default function ViewJobSite() {
   const [jobSiteDetails, setJobSiteDetails] = useState({});
+  const [notesInput, setNotesInput] = useState('');
   const router = useRouter();
 
   // grab firebaseKey from url
   const { firebaseKey } = router.query;
 
+  // const getJobSiteDetails = () => {
+  //   viewJobSiteDetails(firebaseKey).then(setJobSiteDetails);
+  // };
+
   const getJobSiteDetails = () => {
-    viewJobSiteDetails(firebaseKey).then(setJobSiteDetails);
+    viewJobSiteDetails(firebaseKey).then((details) => {
+      setJobSiteDetails(details);
+      setNotesInput(details.notes || '');
+    });
+  };
+
+  const handleNotesChange = (e) => {
+    setNotesInput(e.target.value);
+    setJobSiteDetails((prevDetails) => ({
+      ...prevDetails,
+      notes: e.target.value,
+    }));
   };
 
   // make call to API layer to get the data
@@ -19,7 +35,6 @@ export default function ViewJobSite() {
     getJobSiteDetails();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [firebaseKey]);
-  console.warn(jobSiteDetails.equipment);
   return (
     <div className="mt-5 d-flex flex-wrap">
       <div className="d-flex flex-column">
@@ -34,10 +49,13 @@ export default function ViewJobSite() {
         <hr />
         <p>Location: {jobSiteDetails.location}</p>
         <hr />
-        <p> {jobSiteDetails.operable
-          ? `Operable:  ${jobSiteDetails.operable}`
-          : `Operable:  ${jobSiteDetails.operable}`}
-        </p>
+        <p>Foreman Notes: {jobSiteDetails.notes}</p>
+        <textarea
+          value={notesInput}
+          onChange={handleNotesChange}
+          placeholder="Type your notes here"
+          style={{ width: '100%', height: '100px' }}
+        />
       </div>
     </div>
   );

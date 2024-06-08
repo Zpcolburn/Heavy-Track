@@ -1,15 +1,20 @@
 import React from 'react';
-import { Image } from 'next/image';
+import Card from 'react-bootstrap/Card';
 import { useAuth } from '../utils/context/authContext';
 
 export default function UserCard() {
   const { user } = useAuth();
   return (
-    <div>
-      <h1>{user.displayName}</h1>
-      <Image src={user.photoURL} alt="userURl" width="100px" height="100px" />
-      <h3>{user.email}</h3>
-      <h4>Last Sign In: {user.metadata.lastSignInTime}</h4>
-    </div>
+    <Card style={{
+      width: '18rem', margin: '10px', background: '#D4D4D4',
+    }}
+    >
+      <Card.Img variant="top" src={user.photoURL} style={{ height: '100%' }} />
+      <Card.Body>
+        <Card.Title>{user.displayName}</Card.Title>
+        <p className="card-text bold">Email: {user.email}</p>
+        <p className="card-text bold">Last Sign In: {user.metadata.lastSignInTime}</p>
+      </Card.Body>
+    </Card>
   );
 }

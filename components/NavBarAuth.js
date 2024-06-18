@@ -2,7 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 import {
-  Navbar, Container, Nav, Button,
+  Navbar, Container, Nav, Button, Image,
 } from 'react-bootstrap';
 import { signOut } from '../utils/auth';
 
@@ -11,7 +11,9 @@ export default function NavBarAuth() {
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
         <Link passHref href="/">
-          <Navbar.Brand>Heavy Track</Navbar.Brand>
+          <Nav.Link className="navbar-brand">
+            <Image src="/images/logo.png" alt="Logo" width={65} height={65} />
+          </Nav.Link>
         </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
@@ -19,6 +21,9 @@ export default function NavBarAuth() {
             {/* CLOSE NAVBAR ON LINK SELECTION: https://stackoverflow.com/questions/72813635/collapse-on-select-react-bootstrap-navbar-with-nextjs-not-working */}
             <Link passHref href="/">
               <Nav.Link>Job Sites</Nav.Link>
+            </Link>
+            <Link passHref href="/jobsite/new">
+              <Nav.Link>Add Job Site</Nav.Link>
             </Link>
             <Link passHref href="/equipment">
               <Nav.Link>Equipment</Nav.Link>

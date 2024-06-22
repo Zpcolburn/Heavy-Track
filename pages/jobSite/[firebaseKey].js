@@ -9,12 +9,7 @@ export default function ViewJobSite() {
   const [notesInput, setNotesInput] = useState('');
   const router = useRouter();
 
-  // grab firebaseKey from url
   const { firebaseKey } = router.query;
-
-  // const getJobSiteDetails = () => {
-  //   viewJobSiteDetails(firebaseKey).then(setJobSiteDetails);
-  // };
 
   const getJobSiteDetails = () => {
     viewJobSiteDetails(firebaseKey).then((details) => {
@@ -31,7 +26,6 @@ export default function ViewJobSite() {
     }));
   };
 
-  // make call to API layer to get the data
   useEffect(() => {
     getJobSiteDetails();
   // eslint-disable-next-line react-hooks/exhaustive-deps

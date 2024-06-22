@@ -18,10 +18,16 @@ export default function ShowEquipment() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const buttonStyle = {
+    backgroundColor: '#a2c4f5',
+    color: '#333',
+    borderColor: '#ccc',
+  };
+
   return (
     <div className="text-center my-4">
       <Link href="/equipment/new" passHref>
-        <Button>Add Equipment</Button>
+        <Button style={buttonStyle}>Add Equipment</Button>
       </Link>
       <div className="d-flex flex-wrap">
         {equipment.map((equip) => (

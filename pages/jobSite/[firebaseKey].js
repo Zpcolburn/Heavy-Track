@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { viewJobSiteDetails } from '../../api/mergedData';
+import EquipmentCard from '../../components/EquipmentCard';
 
 export default function ViewJobSite() {
   const [jobSiteDetails, setJobSiteDetails] = useState({});
@@ -18,7 +19,7 @@ export default function ViewJobSite() {
   const getJobSiteDetails = () => {
     viewJobSiteDetails(firebaseKey).then((details) => {
       setJobSiteDetails(details);
-      setNotesInput(details.notes || '');
+      setNotesInput(details.notes ?? '');
     });
   };
 
@@ -56,6 +57,12 @@ export default function ViewJobSite() {
           placeholder="Type your notes here"
           style={{ width: '100%', height: '100px' }}
         />
+        <hr />
+        <div style={{ color: 'white' }} className="d-flex flex-wrap">
+          {jobSiteDetails.equipment?.map((equipment) => (
+            <EquipmentCard key={equipment.firebaseKey} equipmentObj={equipment} onUpdate={getJobSiteDetails} />
+          ))}
+        </div>
       </div>
     </div>
   );

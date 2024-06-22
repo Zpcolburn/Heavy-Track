@@ -64,10 +64,23 @@ const updateEquipment = (payload) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const getEquipmentJobSite = (firebaseKey) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/equipment.json?orderBy="jobsite_id"&equalTo="${firebaseKey}"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(Object.values(data)))
+    .catch(reject);
+});
+
 export {
   getEquipment,
   createEquipment,
   deleteEquipment,
   getSingleEquipment,
   updateEquipment,
+  getEquipmentJobSite,
 };

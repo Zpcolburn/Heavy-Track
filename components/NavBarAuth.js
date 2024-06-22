@@ -31,8 +31,10 @@ export default function NavBarAuth() {
             <Link passHref href="/equipment/new">
               <Nav.Link>Add Equipment</Nav.Link>
             </Link>
+          </Nav>
+          <Nav className="ms-auto">
             <Link passHref href="/profile">
-              <Nav.Link>Profile</Nav.Link>
+              <Nav.Link className="text-white">Profile</Nav.Link>
             </Link>
             <Button variant="danger" onClick={signOut}>Sign Out</Button>
           </Nav>

@@ -6,7 +6,6 @@
     "foreman": "Garry",
     "location": "66958 Stuart Parkway",
     "notes": "",
-    "equipment-id": "-NykRscPZ1HA4-KRAywn",
     "uid": "duoqjjx9RVSKcyH2J7o6HeO7Clb2"
   },
   "-NykMI_AtI73Y68eAr4x": {
@@ -16,17 +15,15 @@
     "foreman": "Mike",
     "location": "75915 Dennis Road",
     "notes": "",
-    "equipment-id": "-NykRscQlxjuFAEeHgEp",
     "uid": "duoqjjx9RVSKcyH2J7o6HeO7Clb2"
   },
   "-NykMI_Bcn5swkFFVY8K": {
     "firebaseKey": "-NykMI_Bcn5swkFFVY8K",
     "name": "Ring Levee",
-    "image": "https://www.yubawater.org/ImageRepository/Document?documentID=4204",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIccWTwsx-iZpl9NnvBRdk0AhWumrkMAsMVw&s",
     "foreman": "Tracy",
     "location": "2508 Vidon Trail",
     "notes": "",
-    "equipment-id": "-NykRscRxFSDiKE-Ddua",
     "uid": "duoqjjx9RVSKcyH2J7o6HeO7Clb2"
   },
   "-NykMI_CjrZyozywY0ag": {
@@ -36,7 +33,6 @@
     "foreman": "John",
     "location": "7 Crownhardt Pass",
     "notes": "",
-    "equipment-id": "-NykRscS29bQZh6jLg6Y",
     "uid": "duoqjjx9RVSKcyH2J7o6HeO7Clb2"
   },
   "-NykMI_CjrZyozywY0ah": {
@@ -46,7 +42,6 @@
     "foreman": "Brian",
     "location": "11896 Linden Point",
     "notes": "",
-    "equipment-id": "-NykRscTKJQJnKZo0xVs",
     "uid": "duoqjjx9RVSKcyH2J7o6HeO7Clb2"
   }
 }

@@ -18,5 +18,13 @@ a {
 }
 
 body {
-  background-color: #08a71e;
+  background-color: #cdcdb3;
+}
+
+.button {
+  transition: background-color 0.3s ease;
+}
+.button:hover,
+.button:active {
+  background-color: #ffcccb;
 }
